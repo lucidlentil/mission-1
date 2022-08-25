@@ -1,0 +1,151 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(#0e7582, #e87e4c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(251, 245, 234);
+}
+
+.links {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+
+.menu {
+    flex: 50%;
+    justify-content: left;
+    animation: mainFade 5s;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(251, 245, 234);
+    padding: 0px 30px;
+    transition: 300ms ease-in-out;
+}
+.menu-link:hover {
+    color: #e49571;
+}
+.find-me {
+    flex: 50%;
+    justify-content: right;
+    text-align: right;
+    animation: mainFade 5s;
+}
+
+.icons {
+    font-size: 30px;
+    color: rgb(251, 245, 234);
+    margin: 0px 50px;
+    transition: 300ms ease-in-out;
+}
+
+.icons:hover {
+    color: #e49571;
+}
+
+.heading {
+    text-align: right;
+    margin: 50px 50px;
+    padding-top: 50px;
+    animation: titleFade 1s;
+}
+
+.heading h1 {
+    font-size: 50px;
+    font-weight: 200;
+}
+
+#name {
+    font-weight: 500;
+}
+
+.heading h2 {
+    font-size: 30px;
+    font-weight: 400;
+    animation: mainFade 1.5s;
+}
+
+@keyframes titleFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mainFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+.content {
+    display: flex; 
+    height: 100%; 
+    animation: mainFade 1.5s; 
+}
+.content h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 5px;
+}
+.contact-me {
+    flex: 50%;
+    margin: 5px 50px; 
+}
+
+.contact-form {
+    flex: 50%; 
+    margin: 20px 20px; 
+}
+#first-name,
+#last-name,
+#email-address,
+#found-me {
+    border: none;
+    margin: 10px 3px;
+    width: 300px; 
+    height: 20px;
+    border-radius: 3px;
+}
+
+#found-me {
+    color: rgb(117, 116, 114);
+    width: 304px; 
+    height: 22px;
+}
+
+#your-message {
+    border: none;
+    border-radius: 3px;
+    width: 60%; 
+    height: 100px;
+    margin: 5px 3px
+} 
+#submit-button {
+    border-radius: 5%; 
+    border: 0px; 
+    transition: 300ms ease-in-out;
+}
+#submit-button:hover {
+    color:rgb(251, 245, 234);
+    background-color: #0e7582;
+    cursor: pointer; 
+}
