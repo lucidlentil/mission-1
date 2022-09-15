@@ -90,3 +90,9 @@ body {
         opacity: 1;
     }
 }
+
+.content {
+    display: flex;
+    height: 100%;
+    animation: mainFade 1.5s;
+}

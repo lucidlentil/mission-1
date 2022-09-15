@@ -2,35 +2,32 @@ const contactTitleElement = document.querySelector('#contact-title');
 const contactBodyElement = document.querySelector('#contact-body');
 const contactFormElement = document.querySelector('.contact-form');
 const submitElement = document.querySelector('#submit-button'); 
-const enquiryName = document.querySelector('#first-name');  
+const enquiryName = document.querySelector('#first-name'); 
+const emailElement = document.querySelector('#email-address'); 
+const messageElement = document.querySelector('#your-message'); 
+
 
 function formSubmitted() {
+    if (enquiryName.value !== `` && (emailElement.value.indexOf('@') > -1) && (messageElement.value.length >= 10)){
     contactTitleElement.innerHTML = ``;
     contactBodyElement.innerHTML = ``;
     contactFormElement.innerHTML = `<h2 class="contact-titles">Thanks ${enquiryName.value}!</h2> 
-                                    <p>I'll be in touch with you as soon as possible.</p>`;
+                                    <p>I'll be in touch with you as soon as possible.</p>
+                                    <button> New query</button>`;
+    } else {
+        const errorMessage = document.querySelector('#submit-error'); 
+        errorMessage.innerHTML = `Please complete the required fields`;
+    }
 }
 submitElement.addEventListener('click', formSubmitted);
 
-/*function reloadForm() {
-    contactTitleElement.innerHTML = `Reach out`;
-    contactBodyElement.innerHTML = `I would love to work with others who are venturing into a new line of work - let's help launch each other's careers!`;
-    contactFormElement.innerHTML = `<input type="text" id="first-name" name="first-name" placeholder="First name" required>
-                <input type="text" id="last-name" name="last-name" placeholder="Last name"><br>
-                <input type="email" id="email-address" name="email-address" placeholder="Email" required>
-                <select name="found-me" id="found-me">
-                    <option hidden selected>How did you find me?</option>
-                    <option value="linkedin">Linked In</option>
-                    <option value="github">GitHub</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="friends-family">Friends or family</option>
-                    <option value="other">Other</option>
-                </select>
-                <br>
-                <textarea id="your-message" name="your-message" cols="2" rows="10" placeholder="Your message"
-                    required></textarea>
-                <br>
-                <input type="submit" id="submit-button">`;
+const projectsArray = [{
+    name: 'Weather app', 
+    image: "images/weatherapp.png", 
+    description: 'A loop',
+}]
+function displayArray() {
+    const array = document.querySelector('#loops'); 
+    array.innerHTML = projectsArray[0].name;
 }
-window.addEventListener('onload', reloadForm());
-*/
+displayArray(); 
