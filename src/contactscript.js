@@ -8,7 +8,7 @@ const messageElement = document.querySelector('#your-message');
 
 
 function formSubmitted() {
-    if (enquiryName.value !== `` && (emailElement.value.indexOf('@') > -1) && (messageElement.value.length >= 10)){
+    if (enquiryName.value !== `` && (emailElement.value.indexOf('@') > -1) && (messageElement.value.length >= 5)){
     contactTitleElement.innerHTML = ``;
     contactBodyElement.innerHTML = ``;
     contactFormElement.innerHTML = `<h2 class="contact-titles">Thanks ${enquiryName.value}!</h2> 
@@ -20,14 +20,3 @@ function formSubmitted() {
     }
 }
 submitElement.addEventListener('click', formSubmitted);
-
-const projectsArray = [{
-    name: 'Weather app', 
-    image: "images/weatherapp.png", 
-    description: 'A loop',
-}]
-function displayArray() {
-    const array = document.querySelector('#loops'); 
-    array.innerHTML = projectsArray[0].name;
-}
-displayArray(); 

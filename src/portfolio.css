@@ -96,3 +96,33 @@ body {
     height: 100%;
     animation: mainFade 1.5s;
 }
+.content h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 5px;
+}
+#project-details {
+    flex: 40%;
+    margin: 50px 200px; 
+    text-align: left;
+}
+#image-display {
+    flex: 60%;
+    margin: 50px 50px;
+}
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+#next-project {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(251, 245, 234);
+    transition: 300ms ease-in-out;
+}
+#next-project:hover {
+    color: #0e7582;
+}

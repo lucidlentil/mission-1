@@ -100,24 +100,3 @@ body {
         flex-direction: column;
     }
 }
-.contact-me { 
-    flex: 50%; 
-    margin: 50px 50px;
-} 
-#first-name, #last-name, #email-address, #found-me {
-    border: none;
-    margin: 5px 3px;  
-    height: 20px; 
-    border-radius: 3px;
-}
-#found-me {
-    color:rgb(117, 116, 114); 
-    height: 22px; 
-}
-#your-message {
-    border: none; 
-    border-radius: 3px;
-    width: 304px; 
-    height: 100px;
-    margin: 5px 3px
-}
